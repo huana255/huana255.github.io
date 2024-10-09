@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Directory Listing</title>
+</head>
+<body>
+    <h1>Directory Listing</h1>
+    <ul id="file-list"></ul>
+
+    <script>
+        // Replace 'username' and 'repo-name' with your GitHub username and repository name
+        const username = 'huana255';
+        const repo = 'huana255.github.io';
+        const folderPath = ''; // Leave blank for root, or specify the folder path
+
+        const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/${folderPath}`;
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const fileList = document.getElementById('file-list');
+                data.forEach(file => {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = file.html_url;
+                    link.textContent = file.name;
+                    listItem.appendChild(link);
+                    fileList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error fetching directory contents:', error));
+    </script>
+</body>
+<style>
+    body {
+        margin: 60px; /* Add px unit for margin */
+        font-family: 'Nunito', monospace; /* Ensure Nunito is imported */
+        font-size: 10px;
+    }
+</style>
+</html>
