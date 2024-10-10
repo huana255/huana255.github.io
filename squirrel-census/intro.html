@@ -16,7 +16,31 @@
     </p>
 
     &nbsp;
+
+    <h4> Squirrel Sightings in NYC </h4>
     
+        <div id="map"></div>
+
+        <div class="controls">
+            <button class="btn" onclick="showAllsq()">All</button>
+            <button class="btn" onclick="showGraySq()">Gray</button>
+            <button class="btn" onclick="showBlackSq()">Black</button>
+            <button class="btn" onclick="showCinnamonSq()">Cinnamon</button>
+        </div>
+
+        <p> sources: 
+            <a href="https://www.thesquirrelcensus.com"> squirrel census (Official Site). </a>  |
+            <a href="https://www.thesquirrelcensus.com"> squirrel census (NYC Open Data). </a>
+        </p>
+        
+
+
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="squirrel.js"></script>
+        <script src="map.js"></script>
+
+    &nbsp;
+
     <p>
         Sources:
         <br>
