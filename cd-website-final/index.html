@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page of a Crayon Shin-chan fan site.">
+    <meta name="keywords" content="Crayon Shin-chan, manga, anime, Yoshito Usui, Nohara Shinnosuke, comedy, family, adventure">
+    <meta name="author" content="Alexnader Huang">
+	<title>Crayon Shin-chan</title>
+    <link rel="stylesheet" href="styles/style.css"> 
+    <link rel="icon" href="images/favicon.ico">    
+</head>
+<body>
+    <header>
+        <h1>Crayon Shin-chan</h1>
+        <nav>
+            <menu>
+                <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="yoshito_usui.html">Author</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                </ul>
+            </menu>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="imagebox">
+            <img src="images/shin_1.png" alt="Shin-chan dancing" width="200" height="200" id="shinImage1">
+        <figure class="hovershin">
+            <img src="images/shin_2.webp" alt="Shin-chan sad face" width="200" height="200" id="shinImage2">
+            <figcaption> Image of Shin Chan </figcaption>
+        </figure>    
+        </div>
+    </main>
+
+    <script>
+        const shinImage1 = document.getElementById('shinImage1');
+        shinImage1.addEventListener('click', function() {
+            if (this.style.border === "2px solid #0000FF") {
+                this.style.border = "";
+            } else {
+                this.style.border = "2px solid #0000FF";
+            }
+        });
+    </script>
+
+    <footer>
+        Copyright ©2018 SHIN-EI ANIMATION Co., Ltd.
+    </footer>
+</body>
+</html>

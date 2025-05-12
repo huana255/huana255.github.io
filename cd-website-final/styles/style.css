@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(255, 241, 223);
+    line-height: 1.2;
+    margin: 50px;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    gap: 5px;
+}
+
+nav a {
+    text-align: center;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 1s ease;
+}
+
+nav a:hover {
+    color: white;
+    background-color: rgb(127, 82, 23);
+}
+
+nav a.active {
+    background-color: rgba(127, 82, 23, 0.358);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align:center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+#shinImage2 {
+    float: right;
+}
+
+#imagebox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shin_3 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    border-radius: 30px;
+}
+
+ul {
+    display: flex;
+    margin: 20px;
+}
+
+li {
+    display: inline;
+}
+
+article {
+    text-align: justify;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(255, 211, 153);
+    border-radius: 8px;
+    padding: 20px 20px;
+}
+
+footer h2 {
+    text-align: center;
+}
+
+
+main {
+    margin: 10px;
+}
+
+
+.hovershin {
+    width: 15%;
+    position: relative; 
+}
+
+.hovershin img {
+    width: 100%;
+    height: auto;
+    position: relative; 
+    z-index: 2;
+    border: 5px solid #8B4513;
+}
+    
+.hovershin figcaption {
+    padding: 30%;
+    position: absolute; 
+    z-index: 1; 
+    width: 100%;
+    font-size:10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hovershin img:hover {
+    opacity: .25;
+    cursor: pointer; 
+    transition: opacity 1s ease;
+}
+
+.misae {
+    width: 200px;
+    transition: transform 1s ease;
+}
+.misae:active {
+    transform: translateX(100px)
+}
+
+.c-list {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 15px;
+}
+
+
+@media (max-width: 780px) {
+    body {
+        font-size: 14px;
+        margin: 10px
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    .c-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+        margin: 10px
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+    h2 {
+        font-size: 0.8rem;
+    }
+    .c-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
